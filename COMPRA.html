@@ -1,0 +1,145 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="RECURSOS/LOGO%20DE%20LA%20PAGINA.jpeg" type="image/jpeg">
+        <title>Costa de Granada</title>
+    </head>
+    <body>
+        <header>
+            <div>
+                <a href="index.html">
+                    <img src="RECURSOS/LOGO%20DE%20LA%20PAGINA.jpeg" alt="Logo de CostadeGranada" width="150" height="150" />
+                </a>
+                <h1>COSTADEGRANADA</h1>
+                <h2><i>"Where better than here?"</i></h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" target="_self">HOME</a></li>
+                    <li>Our Plants</a></li>
+                    <ul>
+                        <li><a href="FLORA TERRESTRE.HTML">Terrestrial Plants</a></li>
+                        <li><a href="FLORA MARINA.HTML">Marine Plants</a></li>
+                    </ul>
+                    <li><a href="SOBRE_NOSOTROS.html" target="_self">ABOUT US</a></li>
+                    <li><a href="CONTACTENOS.html" target="_self">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div>
+                <form action="" method="post">
+                    <caption>Purcharse Details</caption>
+                    <fieldset id="NyA">
+                        <legend>Contact Details</legend>
+                        <div class="nombre">
+                            <label for="Nombre">Name</label>
+                            <input type="text" id="Nombre" name="Nombre" required size="10" placeholder="Your Name"/>
+                        </div>
+                        <div class="apellidos">
+                            <label for="Apellidos">Surname</label>
+                            <input type="text" name="Apellidos" id="Apellidos" required placeholder="Your Surname"/>
+                        </div>
+                        <div class="telefono">
+                            <label for="tel">Phone Number</label>
+                            <input type="tel" name="Tel" id="tel" required/>
+                        </div>
+                        <div class="correo">
+                            <label for="email">E-Mail</label>
+                            <input type="email" name="Email" id="email" />
+                            <input type="checkbox" name="Notify" id="notify" />
+                            <label for="notify">Notify Me</label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Address</legend>
+                        <div class="calle">
+                            <label for="Dir">Street Name</label>
+                            <input type="text" name="Direccion" id="Dir" required/>
+                        </div>
+                        <div class="numero">
+                            <label for="Num">Number</label>
+                            <input type="number" name="Numero" id="Num" maxlength="3" required/>
+                        </div>
+                        <div class="poblacion">
+                            <label for="Pob">City</label>
+                            <input type="text" name="Poblacion" id="Pob" required/>
+                        </div>
+                        <div class="provincia">
+                            <label for="Prov">Province</label>
+                            <select name="Provincia" id="Prov">
+                                <option value="Granada">Granada</option>
+                                <option value="Málaga">Málaga</option>
+                                <option value="Huelva">Huelva</option>
+                                <option value="Jaén">Jaén</option>
+                                <option value="Almería">Almería</option>
+                                <option value="Sevilla">Sevilla</option>
+                            </select>
+                        </div>
+                        <div class="tipoc">
+                            <label for="TipoC">Tipe of Street</label>
+                            <select name="Tipo de Calle" id="TipoC">
+                                <option value="Barranco">Barranco</option>
+                                <option value="Calle">Calle</option>
+                                <option value="Avenida">Avenida</option>
+                                <option value="Cruce">Cruce</option>
+                                <option value="Via">Via</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Delivery Type</legend>
+                        <div class="TiposE">
+                            <div class="eexp">
+                                <input type="radio" name="TipoE" id="exp" value="Express"/>
+                                <label for="exp">Express</label>
+                            </div>
+                            <div class="enorm">
+                                <input type="radio" name="TipoE" id="norm" value="Normal"/>
+                                <label for="norm">Normal</label>
+                            </div>
+                            <div class="eprog">
+                                <input type="radio" name="TipoE" id="prog" value="Programado"/>
+                                <label for="prog">Programmed</label>
+                                <input type="date" name="FechaE" id="prog">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Payment Method</legend>
+                        <div class="mpago">
+                            <div class="ptar">
+                                <input type="radio" name="TipoP" id="tar" value="Tarjeta"/>
+                                <label for="tar">Credit Card</label>
+                            </div>
+                            <div class="ptrans">
+                                <input type="radio" name="TipoP" id="trans" value="Transferencia"/>
+                                <label for="trans">Bank Transfer</label>
+                            </div>
+                            <div class="pbiz">
+                                <input type="radio" name="TipoP" id="biz" value="Bizum"/>
+                                <label for="biz">Bizum</label>
+                                <input type="tel" name="Bizum" id="TBiz" placeholder="Bizum Phone" required/>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Delivery Instructions</legend>
+                        <div class="ins">
+                            <textarea name="Delivery" id="DelInst" rows="5" cols="50"></textarea>
+                        </div>
+                    </fieldset>
+                    <div class="submit">
+                        <input type="submit" value="Purcharse">
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 Jesús Pérez, Nico Bayá Bayá-Casal, Cristian Alonso. All rights reserved.</p>
+        </footer>
+    </body>
+</html>

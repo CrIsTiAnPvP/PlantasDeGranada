@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Contact - CostadeGranada</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="index.html">
+                <img src="RECURSOS/LOGO%20DE%20LA%20PAGINA.jpeg" alt="CostadeGranada Logo" width="150" height="150" />
+            </a>
+            <h1>COSTADEGRANADA</h1>
+            <h2><i>"Where better than here?"</i></h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" target="_self">HOME</a></li>
+                <li>Our Plants</a></li>
+                <ul>
+                    <li><a href="FLORA TERRESTRE.HTML">Terrestrial Plants</a></li>
+                    <li><a href="FLORA MARINA.HTML">Marine Plants</a></li>
+                </ul>
+                <li><a href="SOBRE_NOSOTROS.html" target="_self">ABOUT US</a></li>
+                <li><a href="CONTACTENOS.html" target="_self">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Contact Us</h1>
+            <h2>Please fill out the following form to get in touch with us</h2>
+
+            <form action="mailto:Contacto@CostadeGranada.es" method="post" enctype="text/plain">
+                <fieldset>
+                    <legend>Personal Data</legend>
+                    <div>
+                        <label for="nombre">Name*</label>
+                        <input type="text" id="nombre" name="nombre" required />
+                    </div>
+                    <div>
+                        <label for="apellidos">Surname*</label>
+                        <input type="text" id="apellidos" name="apellidos" required />
+                    </div>
+                    <div>
+                        <label for="email">E-Mail*</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                    <div>
+                        <label for="telefono">Phone Number</label>
+                        <input type="tel" id="telefono" name="telefono" />
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Contact Purpose</legend>
+                    <div>
+                        <label for="motivo">Choose the reason for contacting us*</label>
+                        <select id="motivo" name="motivo" required>
+                            <option value="Error en la info">Error in the website information</option>
+                            <option value="sugerencia">I have a suggestion</option>
+                            <option value="copyright">The website contains copyrighted content</option>
+                            <option value="inicio sesion err">I have trouble logging in</option>
+                            <option value="robo cuenta">My information has been stolen</option>
+                            <option value="problemas envio">I have problems with shipping</option>
+                            <option value="pago">I have problems with Payment</option>
+                            <option value="otro">Others</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="info">Details</label>
+                        <textarea id="info" name="info" cols="50" rows="8" placeholder="Please provide details about your issue here so we have more information"></textarea>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p><em>NOTE: We cannot guarantee the full resolution of your issue, but we will do everything we can.</em></p>
+        <p>&copy; 2024 CostadeGranada.es</p>
+        <p>Credits: Cristian Alonso, Jesús Pérez, Nicolás Bayá-Casal</p>
+    </footer>
+</body>
+
+</html>
