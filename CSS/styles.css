@@ -1,4 +1,118 @@
-*{
-    width: 100%;
-    height: 100%;
+
+:root {
+	--bone: #ddd8c4ff;
+	--celadon: #a3c9a8ff;
+	--cambridge-blue: #84b59fff;
+	--cambridge-blue-2: #69a297ff;
+	--air-force-blue: #50808eff;
 }
+
+header {
+    background-color: var(--cambridge-blue);
+    color: var(--bone);
+    text-align: center;
+    padding: 0rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+
+  nav {
+    border: 1px solid var(--cambridge-blue-2);
+    background-color: var(--cambridge-blue-2);
+    font-size: 1.31em;
+    padding: 1rem;
+  }
+  
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+ 
+  li {
+    position: relative;
+  }
+  
+ 
+  ul#father {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+
+  a {
+    color: var(--bone);
+    text-decoration: none;
+  }
+  
+  li a {
+    display: block;
+    padding: 8px 13px;
+  }
+  
+
+  li:hover {
+    background-color: var(--cambridge-blue);
+  }
+  
+  li:hover a {
+    color: var(--bone);
+  }
+  
+ 
+  li:has(ul.child li:hover) {
+    background-color: var(--cambridge-blue);
+  }
+  
+
+  ul.child {
+    display: none;
+    position: absolute;
+    width: 250px;
+    top: 100%;
+    left: 0;
+    background-color: var(--cambridge-blue-2);
+    z-index: 100;
+  }
+
+  li:hover > ul.child {
+    display: block;
+  }
+  
+
+  ul.child li {
+    padding: 10px;
+    border-bottom: 1px solid var(--bone);
+  }
+  
+  ul.child li a {
+    color: var(--bone);
+    font-size: 1rem;
+  }
+  
+  ul.child li:hover a {
+    color: var(--bone);
+  }
+  
+  ul.child li:hover {
+    background-color: var(--cambridge-blue);
+  }
+
+  .compr {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  button {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  
