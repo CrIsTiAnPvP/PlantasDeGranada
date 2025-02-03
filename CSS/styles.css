@@ -1,118 +1,163 @@
-
 :root {
-	--bone: #ddd8c4ff;
-	--celadon: #a3c9a8ff;
-	--cambridge-blue: #84b59fff;
-	--cambridge-blue-2: #69a297ff;
-	--air-force-blue: #50808eff;
+  --bone: #ddd8c4ff;
+  --celadon: #a3c9a8ff;
+  --cambridge-blue: #84b59fff;
+  --cambridge-blue-2: #69a297ff;
+  --air-force-blue: #50808eff;
 }
 
 header {
-    background-color: var(--cambridge-blue);
-    color: var(--bone);
-    text-align: center;
-    padding: 0rem;
+  background-color: var(--cambridge-blue);
+  color: var(--bone);
+  text-align: center;
+  padding: 0;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
-  
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
 
+nav {
+  border: 1px solid var(--cambridge-blue-2);
+  background-color: var(--cambridge-blue-2);
+  font-size: 1.31em;
+  padding: 1rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  position: relative;
+}
+
+ul#father {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+a {
+  color: var(--bone);
+  text-decoration: none;
+}
+
+li a {
+  display: block;
+  padding: 8px 13px;
+}
+
+li:hover {
+  background-color: var(--cambridge-blue);
+}
+
+li:hover a {
+  color: var(--bone);
+}
+
+li:has(ul.child li:hover) {
+  background-color: var(--air-force-blue);
+}
+
+ul.child {
+  display: none;
+  position: absolute;
+  width: 250px;
+  top: 100%;
+  left: 0;
+  background-color: var(--cambridge-blue-2);
+  z-index: 100;
+}
+
+li:hover > ul.child {
+  display: block;
+}
+
+ul.child li {
+  padding: 10px;
+  border-bottom: 1px solid var(--bone);
+}
+
+ul.child li a {
+  color: var(--bone);
+  font-size: 1rem;
+}
+
+ul.child li:hover a {
+  color: var(--bone);
+}
+
+ul.child li:hover {
+  background-color: var(--cambridge-blue);
+}
+
+.compr {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+footer {
+  background-color: var(--cambridge-blue-2);
+  color: var(--bone);
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
   nav {
-    border: 1px solid var(--cambridge-blue-2);
-    background-color: var(--cambridge-blue-2);
-    font-size: 1.31em;
-    padding: 1rem;
+    font-size: 1em;
+    padding: 0.5rem;
   }
-  
 
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
- 
-  li {
-    position: relative;
-  }
-  
- 
   ul#father {
-    display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
   }
-  
-
-  a {
-    color: var(--bone);
-    text-decoration: none;
-  }
-  
-  li a {
-    display: block;
-    padding: 8px 13px;
-  }
-  
-
-  li:hover {
-    background-color: var(--cambridge-blue);
-  }
-  
-  li:hover a {
-    color: var(--bone);
-  }
-  
- 
-  li:has(ul.child li:hover) {
-    background-color: var(--cambridge-blue-2);
-  }
-  
 
   ul.child {
-    display: none;
-    position: absolute;
-    width: 250px;
-    top: 100%;
-    left: 0;
-    background-color: var(--cambridge-blue-2);
-    z-index: 100;
+    width: 100%;
+    position: static;
   }
-
-  li:hover > ul.child {
-    display: block;
-  }
-  
 
   ul.child li {
-    padding: 10px;
-    border-bottom: 1px solid var(--bone);
+    text-align: center;
   }
-  
-  ul.child li a {
-    color: var(--bone);
-    font-size: 1rem;
-  }
-  
-  ul.child li:hover a {
-    color: var(--bone);
-  }
-  
-  ul.child li:hover {
-    background-color: var(--cambridge-blue);
+}
+
+@media (max-width: 480px) {
+  header {
+    font-size: 1.5em;
   }
 
-  .compr {
-    text-align: center;
-    margin: 1rem 0;
+  nav {
+    font-size: 0.9em;
   }
-  
+
   button {
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
   }
-  
+
+  body, nav, header, .compr, footer {
+    text-align: center;
+  }
+
+  /* Ocultar el nombre y el eslogan en tamaños pequeños */
+  h1, h2 {
+    display: none;
+  }
+}
