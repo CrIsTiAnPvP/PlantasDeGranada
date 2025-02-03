@@ -116,7 +116,6 @@ footer {
   bottom: 0;
 }
 
-/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
   nav {
     font-size: 1em;
@@ -156,7 +155,6 @@ footer {
     text-align: center;
   }
 
-  /* Ocultar el nombre y el eslogan en tamaños pequeños */
   h1, h2 {
     display: none;
   }
