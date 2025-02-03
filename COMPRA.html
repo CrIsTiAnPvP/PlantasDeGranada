@@ -4,115 +4,153 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="RECURSOS/LOGO%20DE%20LA%20PAGINA.jpeg" type="image/jpeg">
+        <script src="JS/script.js" defer></script>
+        <link rel="stylesheet" href="CSS/compra.css">
+        <link rel="stylesheet" href="CSS/styles.css">
         <title>Costa de Granada</title>
     </head>
     <body>
         <header>
             <div>
-                <a href="index.html">
-                    <img src="RECURSOS/LOGO%20DE%20LA%20PAGINA.jpeg" alt="Logo de CostadeGranada" width="150" height="150" />
-                </a>
-                <h1>COSTADEGRANADA</h1>
-                <h2><i>"Where better than here?"</i></h2>
+              <a href="index.html">
+                <img src="IMAGES/icon.png" alt="Logo de CostadeGranada" width="150" height="150" />
+              </a>
+              <h1>COSTADEGRANADA</h1>
+              <h2><i>"Where better than here?"</i></h2>
             </div>
             <nav>
-                <ul>
-                    <li><a href="index.html" target="_self">HOME</a></li>
-                    <li>Our Plants</a></li>
-                    <ul>
-                        <li><a href="FLORA TERRESTRE.HTML">Terrestrial Plants</a></li>
-                        <li><a href="FLORA MARINA.HTML">Marine Plants</a></li>
-                    </ul>
-                    <li><a href="SOBRE_NOSOTROS.html" target="_self">ABOUT US</a></li>
-                    <li><a href="CONTACTENOS.html" target="_self">CONTACT</a></li>
-                </ul>
+              <ul id="father">
+                <li class="home"><a href="index.html" target="_self">HOME</a></li>
+                <li>
+                  <a href="#">OUR PLANTS</a>
+                  <ul class="child">
+                    <li><a href="FLORA TERRESTRE.HTML">Terrestrial Plants</a></li>
+                    <li><a href="FLORA MARINA.HTML">Marine Plants</a></li>
+                  </ul>
+                </li>
+                <li class="ABOUT"><a href="SOBRE_NOSOTROS.html" target="_self">ABOUT US</a></li>
+                <li class="CONTACT"><a href="CONTACTENOS.html" target="_self">CONTACT</a></li>
+              </ul>
             </nav>
-        </header>
+          </header>
 
         <main>
-            <div>
+            <div id="form">
                 <form action="" method="post">
-                    <caption>Purcharse Details</caption>
+                    <div id="caption">  
+                        <caption>Purcharse Details</caption>
+                    </div>
                     <fieldset id="NyA">
-                        <legend>Contact Details</legend>
-                        <div class="nombre">
-                            <label for="Nombre">Name</label>
-                            <input type="text" id="Nombre" name="Nombre" required size="10" placeholder="Your Name"/>
+                        <div class="NyAl">
+                            <legend>Contact Detais</legend>
                         </div>
-                        <div class="apellidos">
-                            <label for="Apellidos">Surname</label>
-                            <input type="text" name="Apellidos" id="Apellidos" required placeholder="Your Surname"/>
+                        <div class="persona">
+                            <div class="nombre">
+                                <label for="Nombre">Name</label>
+                                <input type="text" id="Nombre" name="Nombre" required size="10" placeholder="Your Name"/>
+                            </div>
+                            <div class="apellidos">
+                                <label for="Apellidos">Surname</label>
+                                <input type="text" name="Apellidos" id="Apellidos" required placeholder="Your Surname"/>
+                            </div>
                         </div>
                         <div class="telefono">
-                            <label for="tel">Phone Number</label>
-                            <input type="tel" name="Tel" id="tel" required/>
+                            <div class="phone">
+                                <label for="tel">Phone Number</label>
+                                <select id="country-code" name="CountryCode">
+                                    <option value="+34" class="ES" selected>+34</option>
+                                    <option value="+1" class="US">+1</option>
+                                    <option value="+44" class="UK">+44</option>
+                                    <option value="+49" class="DE">+49</option>
+                                    <option value="+33" class="FR">+33</option>
+                                </select>
+                                <input type="tel" name="Tel" id="tel" required/>
+                            </div>
                         </div>
                         <div class="correo">
                             <label for="email">E-Mail</label>
-                            <input type="email" name="Email" id="email" />
-                            <input type="checkbox" name="Notify" id="notify" />
-                            <label for="notify">Notify Me</label>
+                            <input type="email" name="Email" id="email" placeholder="example@example.com" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}" required/>
+                            <div class="mailnotify">
+                                <input type="checkbox" name="Notify" id="notify" />
+                                <label for="notify">Notify Me</label>
+                            </div>
                         </div>
                     </fieldset>
-                    <fieldset>
-                        <legend>Address</legend>
-                        <div class="calle">
-                            <label for="Dir">Street Name</label>
-                            <input type="text" name="Direccion" id="Dir" required/>
+                    <fieldset id="Addr">
+                        <div class="Addrl">
+                            <legend>Address</legend>
                         </div>
-                        <div class="numero">
-                            <label for="Num">Number</label>
-                            <input type="number" name="Numero" id="Num" maxlength="3" required/>
-                        </div>
-                        <div class="poblacion">
-                            <label for="Pob">City</label>
-                            <input type="text" name="Poblacion" id="Pob" required/>
-                        </div>
-                        <div class="provincia">
-                            <label for="Prov">Province</label>
-                            <select name="Provincia" id="Prov">
-                                <option value="Granada">Granada</option>
-                                <option value="Málaga">Málaga</option>
-                                <option value="Huelva">Huelva</option>
-                                <option value="Jaén">Jaén</option>
-                                <option value="Almería">Almería</option>
-                                <option value="Sevilla">Sevilla</option>
-                            </select>
-                        </div>
-                        <div class="tipoc">
-                            <label for="TipoC">Tipe of Street</label>
-                            <select name="Tipo de Calle" id="TipoC">
-                                <option value="Barranco">Barranco</option>
-                                <option value="Calle">Calle</option>
-                                <option value="Avenida">Avenida</option>
-                                <option value="Cruce">Cruce</option>
-                                <option value="Via">Via</option>
-                            </select>
+                        <div class="items">
+                            <div class="calle">
+                                <label for="Dir">Street Name</label>
+                                <input type="text" name="Direccion" id="Dir" required/>
+                                <div class="tipoc">
+                                    <label for="TipoC">Type</label>
+                                    <select name="Tipo de Calle" id="TipoC">
+                                        <option value="" selected disabled>Escoge una</option>
+                                        <option value="Calle">Calle</option>
+                                        <option value="Barranco">Barranco</option>
+                                        <option value="Avenida">Avenida</option>
+                                        <option value="Cruce">Cruce</option>
+                                        <option value="Via">Via</option>
+                                    </select>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 tipoci">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>                         
+                                </div>
+                            </div>
+                            <div class="numero">
+                                <label for="Num">Number</label>
+                                <input type="number" name="Numero" id="Num" maxlength="3" required/>
+                            </div>
+                            <div class="poblacion">
+                                <label for="Pob">City</label>
+                                <input type="text" name="Poblacion" id="Pob" required/>
+                                <div class="provincia">
+                                    <label for="Prov">Province</label>
+                                    <select name="Provincia" id="Prov">
+                                        <option value="" selected disabled>Escoge una</option>
+                                        <option value="Granada">Granada</option>
+                                        <option value="Málaga">Málaga</option>
+                                        <option value="Huelva">Huelva</option>
+                                        <option value="Jaén">Jaén</option>
+                                        <option value="Almería">Almería</option>
+                                        <option value="Sevilla">Sevilla</option>
+                                    </select>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 provi">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg> 
+                                </div>
+                            </div>
                         </div>
                     </fieldset>
-                    <fieldset>
-                        <legend>Delivery Type</legend>
+                    <fieldset id="Entrega">
+                        <div class="entl">
+                            <legend>Delivery Type</legend>
+                        </div>
                         <div class="TiposE">
                             <div class="eexp">
                                 <input type="radio" name="TipoE" id="exp" value="Express"/>
                                 <label for="exp">Express</label>
                             </div>
                             <div class="enorm">
-                                <input type="radio" name="TipoE" id="norm" value="Normal"/>
+                                <input type="radio" name="TipoE" id="norm" value="Normal" checked/>
                                 <label for="norm">Normal</label>
                             </div>
                             <div class="eprog">
                                 <input type="radio" name="TipoE" id="prog" value="Programado"/>
                                 <label for="prog">Programmed</label>
-                                <input type="date" name="FechaE" id="prog">
+                                <input type="date" name="FechaE" id="fechaProg">
                             </div>
                         </div>
                     </fieldset>
-                    <fieldset>
-                        <legend>Payment Method</legend>
+                    <fieldset id="Pago">
+                        <div class="pagol">
+                            <legend>Payment Method</legend>
+                        </div>
                         <div class="mpago">
                             <div class="ptar">
-                                <input type="radio" name="TipoP" id="tar" value="Tarjeta"/>
+                                <input type="radio" name="TipoP" id="tar" value="Tarjeta" checked/>
                                 <label for="tar">Credit Card</label>
                             </div>
                             <div class="ptrans">
@@ -122,14 +160,31 @@
                             <div class="pbiz">
                                 <input type="radio" name="TipoP" id="biz" value="Bizum"/>
                                 <label for="biz">Bizum</label>
-                                <input type="tel" name="Bizum" id="TBiz" placeholder="Bizum Phone" required/>
+                                <div class="bizum-container">
+                                    <select id="BizumSelect" name="BizumCode">
+                                        <option value="+34" class="ES" selected>+34</option>
+                                        <option value="+1" class="US">+1</option>
+                                        <option value="+44" class="UK">+44</option>
+                                        <option value="+49" class="DE">+49</option>
+                                        <option value="+33" class="FR">+33</option>
+                                    </select>
+                                    <input type="tel" name="Bizum" id="TBiz" placeholder="             Bizum Phone" required/>
+                                </div>
                             </div>
                         </div>
                     </fieldset>
-                    <fieldset>
-                        <legend>Delivery Instructions</legend>
-                        <div class="ins">
-                            <textarea name="Delivery" id="DelInst" rows="5" cols="50"></textarea>
+                    <fieldset id="Instrucciones">
+                        <input type="checkbox" id="toggle1" class="toggle-input">
+                        <label for="toggle1" class="toggle-header">
+                            <legend>
+                                Delivery Instructions
+                                <span class="arrow"></span>
+                            </legend>
+                        </label>
+                        <div class="toggle-content">
+                            <div class="ins">
+                                <textarea name="Delivery" id="DelInst" rows="5" cols="50"></textarea>
+                            </div>
                         </div>
                     </fieldset>
                     <div class="submit">

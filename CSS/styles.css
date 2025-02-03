@@ -68,7 +68,7 @@ body {
   
  
   li:has(ul.child li:hover) {
-    background-color: var(--cambridge-blue);
+    background-color: var(--cambridge-blue-2);
   }
   
 

@@ -1,0 +1,501 @@
+:root {
+	--bone: #ddd8c4ff;
+	--celadon: #a3c9a8ff;
+	--cambridge-blue: #84b59fff;
+	--cambridge-blue-2: #69a297ff;
+	--air-force-blue: #50808eff;
+}
+
+body{
+	background-color: var(--bone);
+}
+
+#form{
+	background-color: var(--celadon);
+	padding: 1rem;
+	margin: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 1px solid black;
+	border-radius: 1rem;
+}
+
+#caption{
+	display:flex;
+	justify-content: center;
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+
+#NyA, #Pago, #Addr, #Resumen, #Entrega, #Instrucciones{
+	border: none;
+	margin-top: 0;
+}
+input {
+	border: none;
+	padding: .2rem;
+}
+
+select {
+	cursor: pointer;
+}
+
+/* Estilos Contact Details */
+
+#NyA {
+	margin-top: 1rem;
+}
+
+#NyA div.NyAl{
+	display: flex;
+	justify-content: center;
+	margin-bottom: .8rem;
+	font-size: large;
+}
+
+#NyA div {
+	margin-bottom: .2rem;
+}
+
+.persona{
+	display: flex;
+	gap: .2rem;
+}
+
+.persona input{
+	padding-bottom: .2rem;
+	padding-top: .2rem;
+	border: none;
+}
+
+.telefono {
+	display: flex;
+	gap: .8rem;
+}
+
+.phone {
+    display:flex;
+	justify-content: center;
+	width: fit-content;
+}
+
+.phone label {
+	margin-right: 1rem;
+	margin-top: .1rem;
+}
+
+#tel, #country-code {
+	border: none;
+	padding-top: .2rem;
+	padding-bottom: .2rem;
+}
+
+#tel {
+    width: 6.5rem;
+}
+
+.correo {
+	display: flex;
+	gap: .6rem;
+}
+
+.correo label[for="notify"]{
+	margin-top: .1rem;
+}
+
+.correo label {
+	margin-top: .2rem;
+}
+
+.correo input{
+	border: none;
+}
+
+.mailnotify {
+	position: relative;
+	transform: translateY(15%);
+	opacity: 0;
+	transition: opacity .2s ease-in-out;
+}
+
+.mailnotify input[type="checkbox"] { 
+	transform: scale(1.4);
+}
+
+#email:valid ~ .mailnotify {
+	opacity: 1;
+}
+
+/* Estilos Address */
+
+#Addr div.Addrl{
+	margin-top: 0;
+	display: flex;
+	justify-content: center;
+	margin-bottom: .8rem;
+	font-size: large;
+}
+
+#Addr .items{
+	display: flex;
+	flex-direction: column;
+	gap: .3rem;
+}
+
+.calle{
+	display: flex;
+	gap: .1rem;
+}
+
+.tipoc select{
+	border: none;
+	padding: .2rem 	1.2rem .2rem 0;
+	border-radius: .2rem;
+	appearance: none;
+}
+
+.tipoci{
+	width: 1rem;
+	height: 1.2rem;
+	position: absolute;
+	transform: translateX(-110%) translateY(10%);
+	pointer-events: none;
+	transition: transform 1 ease;
+}
+
+.tipoc select:focus + .tipoci {
+	transform: translateX(-120%) translateY(10%) rotate(180deg);
+}
+
+.poblacion{
+	display: flex;
+	gap: .1rem;
+}
+
+.provincia {
+	transform: translateY(10%);
+}
+
+.provincia select{
+	border: none;
+	padding: .2rem 	1.2rem .2rem 0;
+	border-radius: .2rem;
+	appearance: none;
+}
+
+.provi{
+	width: 1rem;
+	height: 1.2rem;
+	position: absolute;
+	transform: translateX(-110%) translateY(10%);
+	pointer-events: none;
+	transition: transform 1 ease;
+}
+
+.provincia select:focus + .provi {
+    transform: translateX(-120%) translateY(10%) rotate(180deg);
+}
+
+.provincia select option{
+	border: none;
+}
+
+/* Estilos Delivery */
+
+#Entrega div.entl{
+	margin-top: 0;
+	display: flex;
+	justify-content: center;
+	margin-bottom: .8rem;
+	font-size: large;
+}
+
+#Entrega .TiposE {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0.8rem;
+	justify-items: center;
+}
+
+
+#Entrega .TiposE > div {
+	width: 50%;
+    min-width: 150px;
+    padding: 1rem;
+    background-color: var(--cambridge-blue);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+#Entrega .TiposE > div label {
+	display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    color: var(--air-force-blue);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#Entrega .TiposE > div.selected {
+	background-color: var(--air-force-blue);
+}
+
+#Entrega .TiposE > div.selected label {
+	color: var(--bone) !important;
+}
+
+#Entrega .TiposE > div::before {
+	font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+#Entrega .eexp::before { content: "⚡"; }
+#Entrega .enorm::before { content: "🚚"; }
+#Entrega .eprog::before { content: "📅"; }
+
+/* Calendario fuera de la caja */
+#fechaProg {
+    display: none;
+    width: 10rem;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 1rem;
+	right: 0;
+    background: var(--cambridge-blue);
+    border: 2px solid var(--air-force-blue);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#fechaProg.visible {
+    display: block;
+    animation: calendarSlide .5s ease-in-out;
+}
+
+
+#Entrega .eprog {
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: visible;
+    z-index: 2;
+}
+
+#Entrega .eprog::before {
+    transition: transform 0.3s ease;
+}
+
+#Entrega .TiposE input[type="radio"] {
+    display: none;
+}
+
+/* Estilos Payment */
+
+#Pago div.pagol{
+	margin-top: 0;
+	display: flex;
+	justify-content: center;
+	margin-bottom: .8rem;
+	font-size: large;
+}
+
+#Pago .mpago input[type="radio"] {
+	display: none;
+}
+
+#Pago .mpago {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    justify-items: center;
+}
+
+#Pago .mpago > div {
+	width: 50%;
+    min-width: 150px;
+    padding: 1rem;
+    background-color: var(--cambridge-blue);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+#Pago .mpago > div label {
+	display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    color: var(--air-force-blue);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#Pago .mpago > div.selected {
+	background-color: var(--air-force-blue);
+}
+
+#Pago .mpago > div.selected label {
+	color: var(--bone) !important;
+}
+
+#Pago .mpago > div::before {
+	font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+#Pago .ptar::before { content: "💳"; transform: translateY(-15%); }
+#Pago .ptrans::before { content: "🏦"; }
+#Pago .pbiz::before { content: "📱"; }
+
+.bizum-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#BizumSelect {
+    border: none;
+	display: none;
+    background-color: var(--cambridge-blue);
+    color: var(--air-force-blue);
+    font-size: 1rem;
+    cursor: pointer;
+	transform: translateX(170%);
+	z-index: 5;
+}
+
+#TBiz {
+    display: none;
+    width: 10rem;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 1rem;
+	right: 0;
+    background: var(--cambridge-blue);
+    border: 2px solid var(--air-force-blue);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#TBiz.visible {
+    display: block;
+    animation: calendarSlide .5s ease-in-out;
+}
+
+#BizumSelect.visible {
+	display: block;
+	animation: codeSlide .5s ease-in-out;
+}
+
+
+#Pago .pbiz{
+	position: relative;
+	transition: all 0.3s ease;
+	overflow: visible;
+	z-index: 2;
+}
+
+#Pago .pbiz::before {
+    transition: transform 0.3s ease;
+}
+/* Estilos Delivery instructions */
+
+.toggle-input {
+	display: none;
+}
+
+.toggle-header {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    padding: 1rem;
+}
+
+.arrow {
+    display: inline-block;
+    margin-left: .6rem;
+    transition: transform 0.6s ease;
+}
+
+.arrow::after {
+    content: "▼";
+    font-size: 14px;
+}
+
+.toggle-input:checked + .toggle-header .arrow {
+    transform: rotate(180deg);
+}
+
+.toggle-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease-out;
+}
+
+.toggle-input:checked ~ .toggle-content {
+    max-height: 50rem;
+	transition: max-height 1s ease-in;
+}
+
+.toggle-content div {
+    padding: 10px;
+}
+
+/* Estilos botón de compra */
+
+.submit {
+	display: flex;
+	justify-content: center;
+}
+.submit input{
+	background-color: var(--cambridge-blue-2);
+	font-size: 1rem;
+	padding: .8rem;
+	margin-bottom: .3rem;
+	margin-top: .1rem;
+	border: none;
+	border-radius: .3rem;
+}
+
+.submit input:hover{
+	background-color: var(--air-force-blue);
+	transform: scale(1.05);
+	animation-duration: .6s;
+}
+
+/* Animaciones */
+@keyframes calendarSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+}
+
+@keyframes codeSlide {
+	from {
+		opacity: 0;
+		transform: translateX(0);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(170%);
+	}
+}
