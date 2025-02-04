@@ -196,7 +196,9 @@ nav a.selection {
   margin-bottom: .5rem;
   background-color: var(--bone);
   overflow: hidden;
+  width: 100%;
 }
+
 .acordeones {
   display: flex;
   justify-content: center;
@@ -227,4 +229,54 @@ nav a.selection {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+}
+
+/* Lista de plantas */
+
+.flora-terrestre, .flora-marina{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("https://wastemagazine.es/fotos2/pancratiummaritimum203.jpg");
+  background-size: cover;
+}
+
+.flora-marina ul, .flora-terrestre ul{
+  list-style: none;
+  padding: 0;
+}
+
+.flora-marina h2, .flora-terrestre h2{
+  margin-top: 2rem;
+  margin-bottom: 0;
+  color: var(--bone);
+}
+
+.flora-marina a, .flora-terrestre a {
+  text-decoration: none;
+  padding: 1rem;
+  color: var(--bone);
+}   
+
+.flora-marina li, .flora-terrestre li {
+  padding: .5rem;
+  margin: .2rem;
+}
+
+.flora-marina a:hover, .flora-terrestre a:hover {
+  border: 1px solid var(--bone);
+  color: var(--air-force-blue);
+  background-color: var(--bone);
+  transform: scale(1.1);
+}   
+
+.flora-marina .separator, .flora-terrestre .separator{
+  padding: .05rem;
+  margin-bottom: 0;
+  margin-top: 1rem;
+  background-color: var(--bone);
+  overflow: hidden;
+  width: 30%;
+  
 }
