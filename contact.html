@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
     <title>Contact - CostadeGranada</title>
 </head>
 
@@ -35,10 +37,12 @@
 
     <main>
         <section>
-            <h1>Contact Us</h1>
-            <h2>Please fill out the following form to get in touch with us</h2>
+            <div class="cabeceras">
+                <h1>Contact Us</h1>
+                <h2>Please fill out the following form to get in touch with us</h2>
+            </div>
 
-            <form action="mailto:Contacto@CostadeGranada.es" method="post" enctype="text/plain">
+            <form action="mailto:Contacto@CostadeGranada.es" method="post" enctype="text/plain" id="form">
                 <fieldset>
                     <legend>Personal Data</legend>
                     <div>
@@ -53,15 +57,22 @@
                         <label for="email">E-Mail*</label>
                         <input type="email" id="email" name="email" required />
                     </div>
-                    <div>
-                        <label for="telefono">Phone Number</label>
-                        <input type="tel" id="telefono" name="telefono" />
+                    <div class="phone">
+                        <label for="tel">Phone Number</label>
+                        <select id="country-code" name="CountryCode">
+                            <option value="+34" class="ES" selected>+34</option>
+                            <option value="+1" class="US">+1</option>
+                            <option value="+44" class="UK">+44</option>
+                            <option value="+49" class="DE">+49</option>
+                            <option value="+33" class="FR">+33</option>
+                        </select>
+                        <input type="tel" name="Tel" id="tel" required autocomplete="on"/>
                     </div>
                 </fieldset>
 
                 <fieldset>
                     <legend>Contact Purpose</legend>
-                    <div>
+                    <div class="purpose">
                         <label for="motivo">Choose the reason for contacting us*</label>
                         <select id="motivo" name="motivo" required>
                             <option value="Error en la info">Error in the website information</option>
@@ -74,24 +85,25 @@
                             <option value="otro">Others</option>
                         </select>
                     </div>
-                    <div>
-                        <label for="info">Details</label>
+                    <div class="info">
                         <textarea id="info" name="info" cols="50" rows="8" placeholder="Please provide details about your issue here so we have more information"></textarea>
                     </div>
                 </fieldset>
 
-                <div>
+                <div class="submit">
                     <button type="submit">Send</button>
                 </div>
             </form>
         </section>
     </main>
 
-    <footer>
+    <div class="disclaimer">
         <p><em>NOTE: We cannot guarantee the full resolution of your issue, but we will do everything we can.</em></p>
-        <p>&copy; 2024 CostadeGranada.es</p>
-        <p>Credits: Cristian Alonso, Jesús Pérez, Nicolás Bayá-Casal</p>
-    </footer>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Jesús Pérez, Nico Bayá-Casal, Cristian Alonso</p>
+      </footer>
 </body>
 
 </html>
