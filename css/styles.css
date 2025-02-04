@@ -10,7 +10,6 @@ header.pricipal {
   background-color: var(--cambridge-blue);
   color: var(--bone);
   text-align: center;
-  padding: 0;
 }
 
 body {
@@ -24,6 +23,7 @@ nav {
   background-color: var(--cambridge-blue-2);
   font-size: 1.31em;
   padding: 1rem;
+  margin-bottom: 0;
 }
 
 nav ul {
@@ -163,4 +163,68 @@ nav a.selection {
   div.cabecera h1, div.cabecera h2 {
     display: none;
   }
+}
+
+/* Fondo de index.html */
+.inicio {
+  background-image: url("https://es.kampaoh.com/wp-content/uploads/2019/07/bnn-costa-tropical-salobrena_pst_1.jpg");
+  margin: 0;
+  padding: 0;
+  height: 25rem;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* Estilos about-us */
+.about{
+  background-color: var(--cambridge-blue);
+  color: var(--bone); 
+  padding: 1rem;
+}
+
+.about .cabecera{
+  margin-top: 1rem;
+  background-color: var(--cambridge-blue);
+  color: var(--bone);
+  padding: .5rem;
+  font-size: small;
+}
+
+.about .separator {
+  padding: .05rem;
+  margin-bottom: .5rem;
+  background-color: var(--bone);
+  overflow: hidden;
+}
+.acordeones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about .acordeon {
+  background-color: var(--cambridge-blue-2);
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.about .active, .about .acordeon:hover {
+  background-color: var(--cambridge-blue-2);
+}
+
+.about .panel {
+  padding: 0 18px;
+  background-color: var(--cambridge-blue-2);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
