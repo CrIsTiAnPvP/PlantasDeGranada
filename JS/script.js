@@ -53,4 +53,27 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    const truck = document.querySelector('.truck');
+    const road = document.querySelector('.road');
+    const btnText = document.querySelector('.btn-text');
+    const purchaseBtn = document.querySelector('.purchase-btn');
+
+    
+    truck.addEventListener('animationend', () => {
+        console.log('Animation ended');
+        truck.classList.add('hidden');
+        road.classList.add('hidden');
+        btnText.classList.add('visible');
+        purchaseBtn.classList.add('clean');
+        setTimeout(() => {
+            truck.classList.remove('hidden');
+            road.classList.remove('hidden');
+            btnText.classList.remove('visible');
+            purchaseBtn.classList.remove('clean');
+        }, 1500); 
+    });
+    
+    
+    
 });

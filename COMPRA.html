@@ -64,12 +64,12 @@
                                     <option value="+49" class="DE">+49</option>
                                     <option value="+33" class="FR">+33</option>
                                 </select>
-                                <input type="tel" name="Tel" id="tel" required/>
+                                <input type="tel" name="Tel" id="tel" required autocomplete="on"/>
                             </div>
                         </div>
                         <div class="correo">
                             <label for="email">E-Mail</label>
-                            <input type="email" name="Email" id="email" placeholder="example@example.com" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}" required/>
+                            <input type="email" name="Email" id="email" placeholder="example@example.com" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}" required autocomplete="on"/>
                             <div class="mailnotify">
                                 <input type="checkbox" name="Notify" id="notify" />
                                 <label for="notify">Notify Me</label>
@@ -87,7 +87,7 @@
                                 <div class="tipoc">
                                     <label for="TipoC">Type</label>
                                     <select name="Tipo de Calle" id="TipoC">
-                                        <option value="" selected disabled>Escoge una</option>
+                                        <option value="" selected disabled>Choose one</option>
                                         <option value="Calle">Calle</option>
                                         <option value="Barranco">Barranco</option>
                                         <option value="Avenida">Avenida</option>
@@ -109,7 +109,7 @@
                                 <div class="provincia">
                                     <label for="Prov">Province</label>
                                     <select name="Provincia" id="Prov">
-                                        <option value="" selected disabled>Escoge una</option>
+                                        <option value="" selected disabled>Choose one</option>
                                         <option value="Granada">Granada</option>
                                         <option value="Málaga">Málaga</option>
                                         <option value="Huelva">Huelva</option>
@@ -188,7 +188,18 @@
                         </div>
                     </fieldset>
                     <div class="submit">
-                        <input type="submit" value="Purcharse">
+                        <!-- <input type="submit" value="Purcharse"> -->
+                        <button class="purchase-btn">
+                            <span class="btn-text">Purchase</span>
+                            <div class="delivery-animation">
+                              <div class="road"></div>
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="truck">
+                                <path d="M3.375 4.5C2.339 4.5 1.5 5.34 1.5 6.375V13.5h12V6.375c0-1.036-.84-1.875-1.875-1.875h-8.25ZM13.5 15h-12v2.625c0 1.035.84 1.875 1.875 1.875h.375a3 3 0 1 1 6 0h3a.75.75 0 0 0 .75-.75V15Z" />
+                                <path d="M8.25 19.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0ZM15.75 6.75a.75.75 0 0 0-.75.75v11.25c0 .087.015.17.042.248a3 3 0 0 1 5.958.464c.853-.175 1.522-.935 1.464-1.883a18.659 18.659 0 0 0-3.732-10.104 1.837 1.837 0 0 0-1.47-.725H15.75Z" />
+                                <path d="M19.5 19.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
+                              </svg>                              
+                            </div>
+                          </button>
                     </div>
                 </form>
             </div>
