@@ -280,3 +280,78 @@ nav a.selection {
   width: 30%;
   
 }
+
+
+/* Plantas */
+
+.planta{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--bone);
+  background-color: var(--cambridge-blue);
+}
+
+div.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: .5rem;
+  border-radius: 1rem;
+}
+
+.planta .separator-t {
+  padding: .05rem;
+  margin-bottom: .5rem;
+  background-color: var(--bone);
+  overflow: hidden;
+  width: 50%; 
+}
+
+.planta header{
+  margin-top: .5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.planta .buy{
+  padding: .8rem;
+  border-radius: 1rem;
+  background-color: var(--cambridge-blue-2);
+}
+
+.planta .buy a{
+  color: var(--bone);
+  text-decoration: none;
+}
+
+.planta .buy:hover > a{
+  color: var(--air-force-blue); 
+  transform: scale(1.1);
+}
+
+.planta .content, .planta .content section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.planta .content section{
+  width: 70%;
+}
+
+figure img{
+  width: 100%;
+  border-radius: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin-bottom: 2rem;
+}
