@@ -6,7 +6,7 @@
   --air-force-blue: #50808eff;
 }
 
-header.principal {
+header.pricipal {
   background-color: var(--cambridge-blue);
   color: var(--bone);
   text-align: center;
@@ -156,7 +156,7 @@ nav a.selection {
     padding: 0.4rem 0.8rem;
   }
 
-  body, nav, header.principal, footer {
+  body, nav, header.pricipal, footer {
     text-align: center;
   }
 
